@@ -16,7 +16,7 @@ if ($rss) {
         $pubDate = strtotime($item->pubDate);
         $formattedDate = date('Y-m-d H:i:s', $pubDate);
         $content = $item->description;
-        $link = $item->link; // Get the link to the original post
+        $link = $item->link; // - get the post link
 
         if (!in_array($title, $seenItemTitles)) {
             echo "<small><a href=\"$link\" target=\"_blank\">$formattedDate</a> : </small> $content<br>"; // * you can change how it's displayed on your site here
